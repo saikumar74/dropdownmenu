@@ -1,0 +1,82 @@
+body{
+    font-family:sans-serif ;
+    background: rgb(219, 236, 251);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.dropdown{
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+}
+.dropdown *{
+    box-sizing: border-box;
+}
+.select{
+    background: #afbcda;
+    color:rgb(248, 34, 34);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #1756ea solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.select-clicked{
+    border: 2px #b2c0e3 solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+.select:hover{
+    background: #f2fcb3;
+}
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid wheat;
+    transition: all 0.3s;
+}
+.caret-rotate{
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+.menu{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #89aff9;
+    border: 1px rgb(252, 33, 33) solid;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 3em;
+    left:50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transform: 0.2s;
+    z-index: 1;
+}
+.menu li{
+    padding:0.7em 0.5em;
+    margin:0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menu li:hover{
+    background: rgb(11, 80, 231);
+}
+.active{
+    background: rgb(236, 205, 148);
+}
+.menu-open{
+    display:block;
+    opacity: 1;
+    
+}
